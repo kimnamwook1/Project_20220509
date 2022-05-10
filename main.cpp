@@ -1,15 +1,18 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 int main()
 {
+
 	char Buffer[1024] = { 0, };
 	
 	cin >> Buffer;
 
 	int Size = strlen(Buffer);//int Size = 0;
-	char* Array = new char[Size+1];
+	
+
 	for (int i = 0; i < 1024; ++i)
 	{
 		if (Buffer[i] == '\0')
@@ -18,6 +21,7 @@ int main()
 		}
 	}
 
+	char* Array = new char[Size + 1];
 	for (int i = 0; i < Size; ++i)
 	{
 		Array[i] = Buffer[i];
